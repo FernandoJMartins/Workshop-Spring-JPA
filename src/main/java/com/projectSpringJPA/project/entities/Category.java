@@ -1,9 +1,10 @@
 package com.projectSpringJPA.project.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -25,9 +26,9 @@ public class Category implements Serializable{
 	private Long id;
 	private String name;
 	
-//	@JsonIgnore
-//	@OneToMany(mappedBy = "client")
-//	private List<Product> products = new ArrayList<>();
+	@JsonIgnore	
+	@OneToMany(mappedBy = "products")
+	private Set<Product> products = new HashSet<>();
 	
 	public Category(){}
 	
@@ -38,9 +39,9 @@ public class Category implements Serializable{
 
 	}
 	
-//	public List<Order> getProducts(){
-//		return products;
-//	}
+	public Set<Product> getProducts(){
+		return products;
+	}
 
 	public String getName() {
 		return name;
