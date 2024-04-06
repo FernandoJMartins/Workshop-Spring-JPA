@@ -28,4 +28,7 @@ public class UserService {
 		return ur.save(user);
 	}
 
+	public void delete(Long id) {
+		ur.deleteById(id);
+	}
 }
