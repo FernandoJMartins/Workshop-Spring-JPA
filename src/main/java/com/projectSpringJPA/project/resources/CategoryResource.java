@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projectSpringJPA.project.entities.Category;
-import com.projectSpringJPA.project.entities.User;
 import com.projectSpringJPA.project.services.CategoryService;
 
 @RestController
